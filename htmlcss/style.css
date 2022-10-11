@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.green {
+    background-color: green;    
+    width: 30vw;
+    height: 300px;
+
+}
+
+.red {
+    background-color: red;    
+    width: 30vw;
+    height: 300px;
+}
+
+.yellow {
+    background-color: yellow;    
+    width: 30vw;
+    height: 300px;
+}
+
+@media (min-width: 600px) {
+    .container{
+        display: unset;
+        flex-direction: unset;
+    }
+    .green, .red, .yellow {
+        width: 100vw;
+    }
+  }
