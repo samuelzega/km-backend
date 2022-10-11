@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .purple{
+                color:purple ;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">            
+            
+        </div>
+        <button id="buttonClickme">click me</button>
+
+        <form id="formInput">
+            <label for="nama">Name</label>
+            <input id="nama" value=""></input>
+            <label for="kelas">Kelas</label>
+            <input id="kelas" value=""></input>
+            <input type="submit" >
+        </form>
+    </body>
+    <script>
+        const data = ["samuel", "adi mas", "anjis", "kiki"]
+        const newParagraph = document.createElement("p")
+        newParagraph.innerText = "samuel adalah mentor km be 15-21"
+
+        const newParagraph2 = document.createElement("p")
+        newParagraph2.innerText = "samuel adalah mentor km be 15-21"
+
+        const container = document.getElementById("container")
+        
+        container.append(newParagraph)
+        container.appendChild(newParagraph2)
+
+        let myButton = document.getElementById("buttonClickme")
+        myButton.addEventListener("click", function () {
+            alert("button clicked")
+        })
+
+        // function buttonClicked() {
+        //     alert("button clicked")
+        // }
+
+        // let submitButton = document.getElementById("submitButton")
+        // document.addEventListener("click", submitForm)
+
+        let formInput = document.getElementById("formInput")
+        formInput.addEventListener("submit", submitForm)
+        // formInput.id
+
+        function submitForm(e) {
+            e.preventDefault();
+            console.log(e.target.nama.value);
+            // alert("nama: "+ e.target.nama.value + ", kelas: "+ e.target.kelas.value )
+        }
+
+        for (let i = 0; i < data.length; i++) {
+            const newName = document.createElement("p")
+            newName.innerText = data[i]
+            if (i%2 !=0) {
+             newName.style.cssText = 'color: red;'   
+            }else {
+                newName.classList.add("purple")   
+            }
+            container.appendChild(newName)
+        }
+    </script>
+</html>

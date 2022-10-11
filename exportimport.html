@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div>
+            <p id="paragraph"></p>
+        </div>
+        <script >
+            const name = "samuel"
+            const age = 18
+            function getName( name) {
+                return "my name is " + name
+            }
+            function getAge(age) {
+                const newAge = age + 8
+                return "my age in 2030 is " +  newAge
+            }
+            function getBiodata(name, age) {
+                return {
+                    name, age
+                }
+            }
+            console.log(getName(name))
+            setTimeout(() => {
+                console.log(getAge(age))
+            }, 3000);
+            console.log(getBiodata(name, age))
+
+        </script>
+    </body>
+</html>
